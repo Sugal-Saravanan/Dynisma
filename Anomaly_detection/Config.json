@@ -1,72 +1,93 @@
-{
-  "io": {
-    "input_folder": "./Datasets/Datasets",            
-    "residual_folder": "./residual_created/",  
-    "output_folder": "./outputs/"  
-  },
-  "residuals": {
-    "enabled": true,                            
-    "demand_token": "Demand",
-    "measured_token": "Measured",
-    "residual_token": "Residual",
-    "suffix": "_residual"                       
-  },
-  "features": {
-    "window": 5,                                
-    "max_features": 500                         
-  },
-  "threshold": {
-    "k": 3.5                                   
-  },
-  "ae": {
-    "epochs": 50,
-    "lr": 0.001
-  },
-  "lstm": {
-    "seq_len": 5,
-    "hidden_dim": 64,
-    "patience": 5,
-    "max_sequences": 3000,
-    "downsample": 5
-  },
-  "lof": {
-    "n_neighbors": 20
-  },
-  "voting": {
-    "rule": "vote_3plus",
-    "min_gap": 1
-  },
-  "plots": {
-    "enabled": true,
-    "max_files": null
-  },
-  "runtime": {
-    "use_float32": true
-  },
-  "hybrid": {
-    "enabled": true,
-    "method": "robust_z",
-    "min_components": 2,
-    "weights": {
-      "iso_score": 0.2,
-      "lof_score": 0.2,
-      "ae_error": 0.3,
-      "lstm_error": 0.3
-    }
-  },
-  "hybrid_threshold": {
-    "mode": "quantile",
-    "k": 3.5,
-    "quantile": 0.99
-  },
-  "report": {
-    "enabled": true,
-    "top_n_episodes": 3,  
-    "top_n_per_file": 2,   
-    "max_pages": 12,       
-    "pad_points": 100      
-},
-"selection": { "rule": "hybrid" }
-
-}
-
+        {
+                "io": {
+                    "input_folder": "./Datasets/Datasets",
+                    "residual_folder": "./Anomaly_detection/residual_created/",
+                    "output_folder": "./Anomaly_detection/code/outputs/"
+                },
+                "residuals": {
+                    "enabled": true,
+                    "demand_token": "Demand",
+                    "measured_token": "Measured",
+                    "residual_token": "Residual",
+                    "suffix": "_residual"
+                },
+                "features": {
+                    "window": 5,
+                    "max_features": 500
+                },
+                "threshold": {  
+                    "k": 3.5
+                },
+                "ae": {
+                    "epochs": 50,
+                    "lr": 0.001,
+                    "batch_size": 1024
+                },
+                "lstm": {
+                    "seq_len": 5,
+                    "hidden_dim": 64,
+                    "patience": 5,
+                    "max_sequences": 2000,
+                    "downsample": 10
+                },
+                "lof": {
+                    "n_neighbors": 20,
+                    "subset_size": 80000,
+                    "batch_size": 20000
+                },
+                "hybrid": {
+                    "enabled": true,
+                    "method": "robust_z",
+                    "min_components": 2,
+                    "weights": {
+                        "iso_score": 0.20,
+                        "lof_score": 0.20,
+                        "ae_error": 0.30,
+                        "lstm_error": 0.30
+                    }
+                },
+                "hybrid_threshold": {
+                    "mode": "quantile",
+                    "k": 3.5,
+                    "quantile": 0.99
+                },
+                "selection": {
+                    "rule": "hybrid"
+                },
+                "voting": {
+                    "rule": "vote_3plus",
+                    "min_gap": 1
+                },
+                "plots": {
+                    "enabled": true,
+                    "max_files": null,
+                    "emit_rate_plot": true
+                },
+                "runtime": {
+                    "use_float32": true,
+                    "downcast_dataframe": true
+                },
+                "limits": {   
+                    "max_rows_lof": 80000,
+                    "max_rows_lstm": 120000,
+                    "max_rows_ae": 600000
+                },
+                "signals": {
+                    "sample_rate_hz": 100.0,
+                    "residual_token": "Residual",
+                    "demand_token": "Demand",
+                    "measured_token": "Measured"
+                },
+                "scores": {
+                    "saturation_pct": 95.0,
+                    "resid_prominence_pct": 95.0,
+                    "min_window_len": 5
+                },
+                "report": {
+                    "enabled": true,
+                    "top_n_episodes": 3,
+                    "top_n_per_file": 2,
+                    "max_pages": 12,
+                    "pad_points": 100
+                }
+        }

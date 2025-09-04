@@ -1,0 +1,66 @@
+# Step Log for anomaly_detection — started 2025-09-04 16:11:00
+[2025-09-04 16:11:00] Pipeline started
+[2025-09-04 16:11:00] Residual creation completed → ./Anomaly_detection/residual_created/
+[2025-09-04 16:11:00] Discovered 7 CSV file(s) in ./Anomaly_detection/residual_created/
+[2025-09-04 16:11:17] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] Downcast complete
+[2025-09-04 16:11:20] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] Features prepared → shape=180196x168
+[2025-09-04 16:11:21] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] Scaling complete
+[2025-09-04 16:11:31] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] IF complete — thr=0.012898, pos=6081
+[2025-09-04 16:18:09] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] AE complete — thr=0.526471, pos=6631
+[2025-09-04 16:21:04] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] LOF complete — thr=-0.131119, pos=2253
+[2025-09-04 16:21:27] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] LSTM-AE complete — thr=1.520999, pos=95
+[2025-09-04 16:21:28] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] Hybrid complete — thr=0.456401, pos=1802
+[2025-09-04 16:21:28] [Dataset01_Ski_CrossbeamYawNotPerforming_residual] Voting complete
+[2025-09-04 16:21:29] Completed file 'Dataset01_Ski_CrossbeamYawNotPerforming_residual' — HYB positives=1802
+[2025-09-04 16:21:29] [Dataset02_Matrix_Rocker4EncoderNotWorking_residual] Downcast complete
+[2025-09-04 16:21:29] [STEP 2] ❌ Skipped Dataset02_Matrix_Rocker4EncoderNotWorking_residual: No residuals found.
+[2025-09-04 16:22:03] [Dataset03_Wushu_YawTrapezoidNormal_residual] Downcast complete
+[2025-09-04 16:22:08] [Dataset03_Wushu_YawTrapezoidNormal_residual] Features prepared → shape=381470x168
+[2025-09-04 16:22:11] [Dataset03_Wushu_YawTrapezoidNormal_residual] Scaling complete
+[2025-09-04 16:22:31] [Dataset03_Wushu_YawTrapezoidNormal_residual] IF complete — thr=0.007563, pos=4543
+[2025-09-04 16:36:54] [Dataset03_Wushu_YawTrapezoidNormal_residual] AE complete — thr=0.711874, pos=2865
+[2025-09-04 16:42:11] [Dataset03_Wushu_YawTrapezoidNormal_residual] LOF complete — thr=-0.336051, pos=3797
+[2025-09-04 16:42:32] [Dataset03_Wushu_YawTrapezoidNormal_residual] LSTM-AE complete — thr=1.043023, pos=104
+[2025-09-04 16:42:34] [Dataset03_Wushu_YawTrapezoidNormal_residual] Hybrid complete — thr=0.284789, pos=3815
+[2025-09-04 16:42:34] [Dataset03_Wushu_YawTrapezoidNormal_residual] Voting complete
+[2025-09-04 16:42:35] Completed file 'Dataset03_Wushu_YawTrapezoidNormal_residual' — HYB positives=3815
+[2025-09-04 16:42:37] [Dataset04_Wushu_YawWaveletSqueak_residual] Downcast complete
+[2025-09-04 16:42:37] [Dataset04_Wushu_YawWaveletSqueak_residual] Features prepared → shape=18996x168
+[2025-09-04 16:42:38] [Dataset04_Wushu_YawWaveletSqueak_residual] Scaling complete
+[2025-09-04 16:42:40] [Dataset04_Wushu_YawWaveletSqueak_residual] IF complete — thr=-0.138718, pos=5912
+[2025-09-04 16:43:21] [Dataset04_Wushu_YawWaveletSqueak_residual] AE complete — thr=0.193491, pos=4362
+[2025-09-04 16:43:24] [Dataset04_Wushu_YawWaveletSqueak_residual] LOF complete — thr=1.277784, pos=1179
+[2025-09-04 16:43:47] [Dataset04_Wushu_YawWaveletSqueak_residual] LSTM-AE complete — thr=0.151963, pos=611
+[2025-09-04 16:43:47] [Dataset04_Wushu_YawWaveletSqueak_residual] Hybrid complete — thr=0.863265, pos=190
+[2025-09-04 16:43:47] [Dataset04_Wushu_YawWaveletSqueak_residual] Voting complete
+[2025-09-04 16:43:48] Completed file 'Dataset04_Wushu_YawWaveletSqueak_residual' — HYB positives=190
+[2025-09-04 16:44:01] [Dataset05_Wushu_LaneChanges_ModelBump_residual] Downcast complete
+[2025-09-04 16:44:03] [Dataset05_Wushu_LaneChanges_ModelBump_residual] Features prepared → shape=131196x168
+[2025-09-04 16:44:04] [Dataset05_Wushu_LaneChanges_ModelBump_residual] Scaling complete
+[2025-09-04 16:44:11] [Dataset05_Wushu_LaneChanges_ModelBump_residual] IF complete — thr=0.015842, pos=7951
+[2025-09-04 16:49:06] [Dataset05_Wushu_LaneChanges_ModelBump_residual] AE complete — thr=0.723499, pos=4331
+[2025-09-04 16:51:30] [Dataset05_Wushu_LaneChanges_ModelBump_residual] LOF complete — thr=-0.201595, pos=1185
+[2025-09-04 16:51:52] [Dataset05_Wushu_LaneChanges_ModelBump_residual] LSTM-AE complete — thr=1.307280, pos=157
+[2025-09-04 16:51:52] [Dataset05_Wushu_LaneChanges_ModelBump_residual] Hybrid complete — thr=0.390225, pos=1312
+[2025-09-04 16:51:52] [Dataset05_Wushu_LaneChanges_ModelBump_residual] Voting complete
+[2025-09-04 16:51:53] Completed file 'Dataset05_Wushu_LaneChanges_ModelBump_residual' — HYB positives=1312
+[2025-09-04 16:51:54] [Dataset08_Demo_Jiggler_residual] Downcast complete
+[2025-09-04 16:51:54] [STEP 2] ❌ Skipped Dataset08_Demo_Jiggler_residual: No residuals found.
+[2025-09-04 16:51:54] [Dataset09_Demo_VerticalChirp_residual] Downcast complete
+[2025-09-04 16:51:54] [STEP 2] ❌ Skipped Dataset09_Demo_VerticalChirp_residual: No residuals found.
+[2025-09-04 17:01:35] Saved combined row-level results → ./Anomaly_detection/code/outputs/combined_anomaly_results.csv
+[2025-09-04 17:01:35] Saved per-file model summary → ./Anomaly_detection/code/outputs/model_comparison_summary.csv
+[2025-09-04 17:01:36] Saved bar chart (counts) → ./Anomaly_detection/code/outputs/model_comparison_plot.png
+[2025-09-04 17:01:37] Saved bar chart (RATE %) → ./Anomaly_detection/code/outputs/model_comparison_rate_plot.png
+[2025-09-04 17:01:43] Saved selected rows (hybrid) → ./Anomaly_detection/code/outputs/selected_outputs\selected_anomalies_rows_hybrid.csv  (n=7119)
+[2025-09-04 17:01:55] Saved episodes table → ./Anomaly_detection/code/outputs/selected_outputs\selected_anomaly_episodes_hybrid.csv  (n=3419)
+[2025-09-04 18:52:30] Saved episodes+reasons → ./Anomaly_detection/code/outputs/selected_outputs\selected_anomaly_episodes_with_reasons_hybrid.csv
+[2025-09-04 18:52:30] Saved episodes+scores → ./Anomaly_detection/code/outputs/selected_outputs\selected_anomaly_episodes_with_reasons_and_scores_hybrid.csv
+[2025-09-04 18:53:19] Saved per-file overlays (if any) → ./Anomaly_detection/code/outputs/selected_outputs
+[2025-09-04 18:53:21] Saved sensor table → ./Anomaly_detection/code/outputs/selected_outputs\sensor_table.csv
+[2025-09-04 18:53:22] Saved sensor clusters scatter → ./Anomaly_detection/code/outputs/selected_outputs\sensor_clusters_pca.png
+[2025-09-04 18:53:23] Saved sensor heatmap → ./Anomaly_detection/code/outputs/selected_outputs\sensor_fingerprint_heatmap.png
+[2025-09-04 18:53:24] Saved top sensors bar → ./Anomaly_detection/code/outputs/selected_outputs\top_sensors_episodes_as_primary.png
+[2025-09-04 18:53:44] Ops Report saved → ./Anomaly_detection/code/outputs/ops_report.pdf
+[2025-09-04 18:53:44] Pipeline complete
+[2025-09-04 18:53:44] Step log saved at → ./Anomaly_detection/code/outputs/logs\anomaly_detection_20250904_161100.txt
