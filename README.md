@@ -171,11 +171,7 @@ Reproducibility
 - Random seeds are set where supported (e.g., Isolation Forest, KMeans) to
   reduce run-to-run variance. For exact reproducibility, fix library versions.
 
-License & Citation
-------------------
-License: (add your chosen license, e.g., MIT, Apache-2.0).
-If you use this code in academic work, please cite your thesis and the
-original methods you build on (LOF, Isolation Forest, Autoencoders, LSTM-AE).
+
 
 Contact
 -------
